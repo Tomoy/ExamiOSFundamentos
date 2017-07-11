@@ -15,7 +15,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Crear RootWindow
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = UIColor.brown
+        
+        // Stark House
+        let houses = Repository.local.houses
+        
+        //Creamos los viewcontrollers de distintas casas para usarlos en un TabBarController
+        //En forma genérica con un for loop, por si cambain las casas, se agregan o restan
+        var controllers = [HouseViewController]()
+        
+        for house in houses {
+            controllers.append(HouseViewController(model: house))
+        }
+        
+        //Creamos los navigations controllers también en forma genérica, dependiendo de la cantidad de VC
+        var navs = [UINavigationController]()
+        for controller in controllers {
+            navs.append(UINavigationController(rootViewController: controller))
+        }
+        
+        //Tabbar con dos navigationcontrollers en ves de UIViewControllers
+        let tabVC = UITabBarController()
+        //Directamente uso la extensión para hacerlo mas rápido y reutilizando código para embeber los VC en UINavigationControllers
+        //tabVC.viewControllers = [starkVC.wrappedInNavigationController(), lannisterVC.wrappedInNavigationController()]
+        tabVC.viewControllers = navs
+        window?.rootViewController = tabVC
+        
+        //let starkVC = HouseViewController(model: starkHouse)
+        //let lannisterVC = HouseViewController(model: lannisterHouse)
+        
+        //Creamos el combinador TabBarcontroller
+        //let tabVC = UITabBarController()
+        //tabVC.viewControllers = [starkVC, lannisterVC]
+        //window?.rootViewController = tabVC
+
+
+        //starkNavigationController.pushViewController(starkVC, animated: false)
+        //window?.rootViewController = starkNavigationController
+        
+        
+        //let rootVC:HouseViewController = HouseViewController(model: starkHouse)
+        //window?.rootViewController = rootVC
+        
         return true
     }
 

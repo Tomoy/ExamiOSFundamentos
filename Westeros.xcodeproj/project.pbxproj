@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB34E2E51F141292001F0A03 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34E2E31F141292001F0A03 /* HouseViewController.swift */; };
+		DB34E2E61F141292001F0A03 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB34E2E41F141292001F0A03 /* HouseViewController.xib */; };
 		DB95509B1F0EC4F600B5AC80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */; };
-		DB95509D1F0EC4F600B5AC80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB95509C1F0EC4F600B5AC80 /* ViewController.swift */; };
-		DB9550A01F0EC4F600B5AC80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB95509E1F0EC4F600B5AC80 /* Main.storyboard */; };
 		DB9550A21F0EC4F600B5AC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */; };
 		DB9550A51F0EC4F600B5AC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A31F0EC4F600B5AC80 /* LaunchScreen.storyboard */; };
-		DB9550B01F0EC4F600B5AC80 /* WesterosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9550AF1F0EC4F600B5AC80 /* WesterosTests.swift */; };
+		DB9550BB1F0EC51E00B5AC80 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9550BA1F0EC51E00B5AC80 /* HouseTests.swift */; };
+		DB9550BD1F0EC53A00B5AC80 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9550BC1F0EC53A00B5AC80 /* House.swift */; };
+		DB9550C11F0EC87100B5AC80 /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB9550BF1F0EC87100B5AC80 /* lannister.jpg */; };
+		DB9550C21F0EC87100B5AC80 /* stark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9550C01F0EC87100B5AC80 /* stark.png */; };
+		DB9550C61F0ECACA00B5AC80 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9550C51F0ECACA00B5AC80 /* PersonTests.swift */; };
+		DB9550C81F0ECDD400B5AC80 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9550C71F0ECDD300B5AC80 /* Person.swift */; };
+		DBDC73EF1F155DE900B2B94D /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDC73EE1F155DE900B2B94D /* UIKitExtensions.swift */; };
+		DBDC73F11F1560A500B2B94D /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDC73F01F1560A500B2B94D /* RepositoryTests.swift */; };
+		DBDC73F31F15623B00B2B94D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDC73F21F15623B00B2B94D /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +34,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB34E2E31F141292001F0A03 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
+		DB34E2E41F141292001F0A03 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
 		DB9550971F0EC4F600B5AC80 /* Westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB95509C1F0EC4F600B5AC80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB95509F1F0EC4F600B5AC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9550A41F0EC4F600B5AC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9550A61F0EC4F600B5AC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9550AB1F0EC4F600B5AC80 /* WesterosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WesterosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB9550AF1F0EC4F600B5AC80 /* WesterosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WesterosTests.swift; sourceTree = "<group>"; };
 		DB9550B11F0EC4F600B5AC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9550BA1F0EC51E00B5AC80 /* HouseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
+		DB9550BC1F0EC53A00B5AC80 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		DB9550BF1F0EC87100B5AC80 /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
+		DB9550C01F0EC87100B5AC80 /* stark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stark.png; sourceTree = "<group>"; };
+		DB9550C51F0ECACA00B5AC80 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		DB9550C71F0ECDD300B5AC80 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		DBDC73EE1F155DE900B2B94D /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		DBDC73F01F1560A500B2B94D /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		DBDC73F21F15623B00B2B94D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB34E2E71F14129C001F0A03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB34E2E31F141292001F0A03 /* HouseViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DB95508E1F0EC4F600B5AC80 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +101,14 @@
 		DB9550991F0EC4F600B5AC80 /* Westeros */ = {
 			isa = PBXGroup;
 			children = (
+				DBDC73ED1F155DC600B2B94D /* Cocoa */,
+				DB34E2E71F14129C001F0A03 /* Controllers */,
+				DB9550C31F0EC87600B5AC80 /* Resources */,
 				DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */,
-				DB95509C1F0EC4F600B5AC80 /* ViewController.swift */,
-				DB95509E1F0EC4F600B5AC80 /* Main.storyboard */,
 				DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */,
 				DB9550A31F0EC4F600B5AC80 /* LaunchScreen.storyboard */,
 				DB9550A61F0EC4F600B5AC80 /* Info.plist */,
+				DB9550BE1F0EC6E400B5AC80 /* Models */,
 			);
 			path = Westeros;
 			sourceTree = "<group>";
@@ -90,10 +116,48 @@
 		DB9550AE1F0EC4F600B5AC80 /* WesterosTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB9550AF1F0EC4F600B5AC80 /* WesterosTests.swift */,
 				DB9550B11F0EC4F600B5AC80 /* Info.plist */,
+				DB9550BA1F0EC51E00B5AC80 /* HouseTests.swift */,
+				DB9550C51F0ECACA00B5AC80 /* PersonTests.swift */,
+				DBDC73F01F1560A500B2B94D /* RepositoryTests.swift */,
 			);
 			path = WesterosTests;
+			sourceTree = "<group>";
+		};
+		DB9550BE1F0EC6E400B5AC80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB9550BC1F0EC53A00B5AC80 /* House.swift */,
+				DB9550C71F0ECDD300B5AC80 /* Person.swift */,
+				DBDC73F21F15623B00B2B94D /* Repository.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DB9550C31F0EC87600B5AC80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB34E2E41F141292001F0A03 /* HouseViewController.xib */,
+				DB9550C41F0EC88A00B5AC80 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DB9550C41F0EC88A00B5AC80 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DB9550BF1F0EC87100B5AC80 /* lannister.jpg */,
+				DB9550C01F0EC87100B5AC80 /* stark.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DBDC73ED1F155DC600B2B94D /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				DBDC73EE1F155DE900B2B94D /* UIKitExtensions.swift */,
+			);
+			name = Cocoa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +214,7 @@
 					};
 					DB9550AA1F0EC4F600B5AC80 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DB9550961F0EC4F600B5AC80;
 					};
@@ -179,9 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9550C11F0EC87100B5AC80 /* lannister.jpg in Resources */,
+				DB9550C21F0EC87100B5AC80 /* stark.png in Resources */,
+				DB34E2E61F141292001F0A03 /* HouseViewController.xib in Resources */,
 				DB9550A51F0EC4F600B5AC80 /* LaunchScreen.storyboard in Resources */,
 				DB9550A21F0EC4F600B5AC80 /* Assets.xcassets in Resources */,
-				DB9550A01F0EC4F600B5AC80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB95509D1F0EC4F600B5AC80 /* ViewController.swift in Sources */,
+				DB9550C81F0ECDD400B5AC80 /* Person.swift in Sources */,
+				DB9550BD1F0EC53A00B5AC80 /* House.swift in Sources */,
 				DB95509B1F0EC4F600B5AC80 /* AppDelegate.swift in Sources */,
+				DB34E2E51F141292001F0A03 /* HouseViewController.swift in Sources */,
+				DBDC73EF1F155DE900B2B94D /* UIKitExtensions.swift in Sources */,
+				DBDC73F31F15623B00B2B94D /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9550B01F0EC4F600B5AC80 /* WesterosTests.swift in Sources */,
+				DB9550BB1F0EC51E00B5AC80 /* HouseTests.swift in Sources */,
+				DB9550C61F0ECACA00B5AC80 /* PersonTests.swift in Sources */,
+				DBDC73F11F1560A500B2B94D /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB95509E1F0EC4F600B5AC80 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB95509F1F0EC4F600B5AC80 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB9550A31F0EC4F600B5AC80 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,10 +431,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WesterosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomas.WesterosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Westeros.app/Westeros";
 			};
@@ -380,6 +447,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WesterosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomas.WesterosTests;
@@ -408,6 +476,7 @@
 				DB9550B61F0EC4F600B5AC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB9550B71F0EC4F600B5AC80 /* Build configuration list for PBXNativeTarget "WesterosTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +485,7 @@
 				DB9550B91F0EC4F600B5AC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
