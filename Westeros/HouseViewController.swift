@@ -29,8 +29,9 @@ class HouseViewController: UIViewController {
     func setupUI() {
         
         let wikiButton = UIBarButtonItem(title: "Wiki", style: .plain, target: self, action: #selector(displayWiki))
+        let personsButton = UIBarButtonItem(title: "Persons", style: .plain, target: self, action: #selector(displayPersons))
         
-        navigationItem.rightBarButtonItem = wikiButton
+        navigationItem.rightBarButtonItems = [wikiButton,personsButton]
     }
     
     @objc func displayWiki() {
@@ -38,6 +39,13 @@ class HouseViewController: UIViewController {
         let wikiVC = WikiViewController(model: model)
         
         navigationController?.pushViewController(wikiVC, animated: true)
+    }
+    
+    @objc func displayPersons() {
+        
+        let personsVC = PersonsTableViewController(model: model.sortedMembers())
+        
+        navigationController?.pushViewController(personsVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

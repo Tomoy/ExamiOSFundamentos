@@ -10,6 +10,8 @@
 		DB2201B01F2BDE0A0036C54B /* targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2201AF1F2BDE0A0036C54B /* targaryen.png */; };
 		DB2201B31F2BE03E0036C54B /* HousesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2201B11F2BE03E0036C54B /* HousesTableViewController.swift */; };
 		DB2201B41F2BE03E0036C54B /* HousesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */; };
+		DB2201B71F2CCFA00036C54B /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2201B51F2CCFA00036C54B /* PersonsTableViewController.swift */; };
+		DB2201B81F2CCFA00036C54B /* PersonsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */; };
 		DB27FA4F1F2BB70500F1C8A0 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */; };
 		DB27FA501F2BB70500F1C8A0 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB27FA4E1F2BB70500F1C8A0 /* WikiViewController.xib */; };
 		DB34E2E51F141292001F0A03 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34E2E31F141292001F0A03 /* HouseViewController.swift */; };
@@ -42,6 +44,8 @@
 		DB2201AF1F2BDE0A0036C54B /* targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = targaryen.png; sourceTree = "<group>"; };
 		DB2201B11F2BE03E0036C54B /* HousesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesTableViewController.swift; sourceTree = "<group>"; };
 		DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HousesTableViewController.xib; sourceTree = "<group>"; };
+		DB2201B51F2CCFA00036C54B /* PersonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
+		DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonsTableViewController.xib; sourceTree = "<group>"; };
 		DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		DB27FA4E1F2BB70500F1C8A0 /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		DB34E2E31F141292001F0A03 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 				DB34E2E31F141292001F0A03 /* HouseViewController.swift */,
 				DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */,
 				DB2201B11F2BE03E0036C54B /* HousesTableViewController.swift */,
-				DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */,
+				DB2201B51F2CCFA00036C54B /* PersonsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				DB34E2E41F141292001F0A03 /* HouseViewController.xib */,
+				DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */,
+				DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */,
 				DB27FA4E1F2BB70500F1C8A0 /* WikiViewController.xib */,
 				DB9550C41F0EC88A00B5AC80 /* Images */,
 			);
@@ -261,6 +267,7 @@
 			files = (
 				DB9550C11F0EC87100B5AC80 /* lannister.jpg in Resources */,
 				DB9550C21F0EC87100B5AC80 /* stark.png in Resources */,
+				DB2201B81F2CCFA00036C54B /* PersonsTableViewController.xib in Resources */,
 				DB34E2E61F141292001F0A03 /* HouseViewController.xib in Resources */,
 				DB2201B01F2BDE0A0036C54B /* targaryen.png in Resources */,
 				DB2201B41F2BE03E0036C54B /* HousesTableViewController.xib in Resources */,
@@ -292,6 +299,7 @@
 				DBDC73EF1F155DE900B2B94D /* UIKitExtensions.swift in Sources */,
 				DBDC73F31F15623B00B2B94D /* Repository.swift in Sources */,
 				DB27FA4F1F2BB70500F1C8A0 /* WikiViewController.swift in Sources */,
+				DB2201B71F2CCFA00036C54B /* PersonsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
