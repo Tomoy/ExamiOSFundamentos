@@ -12,40 +12,34 @@ import XCTest
 
 class HouseTests: XCTestCase {
     
-    var starkImage : UIImage!
-    var lannisterImage : UIImage!
-    
     var starkSigil : Sigil!
     var lannisterSigil : Sigil!
     
     var starkHouse : House!
     var lannisterHouse : House!
     
-    var robb : Person!
-    var arya : Person!
-    var sansa : Person!
-
+    var robb   : Person!
+    var arya   : Person!
     var tyrion : Person!
-    
     
     override func setUp() {
         super.setUp()
-
-        starkImage = #imageLiteral(resourceName: "stark.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
         
+        //let houses = Repository.local.houses
+        let starkImage = #imageLiteral(resourceName: "stark.png")
+        let starkWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
         starkSigil = Sigil(description: "Direwolf", image: starkImage)
-        lannisterSigil = Sigil(description: "Rampant Lion", image: lannisterImage)
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming", url: starkWikiURL)
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming")
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!")
+        let lannisterImg = #imageLiteral(resourceName: "lannister.jpg")
+        let lannisterWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
+        lannisterSigil = Sigil(description: "Rampant", image: lannisterImg)
+        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!", url: lannisterWikiURL)
         
         robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
-        sansa = Person(name: "Sansa", house: starkHouse)
-
-        tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
         
+        tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
     }
     
     override func tearDown() {
@@ -86,7 +80,8 @@ class HouseTests: XCTestCase {
         XCTAssertEqual(starkHouse, starkHouse)
         
         //Igualdad
-        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Winter is coming")
+        let starkWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Winter is coming", url: starkWikiURL)
         XCTAssertEqual(jinxed, starkHouse)
         
         //Desigualdad

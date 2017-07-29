@@ -15,14 +15,15 @@ typealias Members = Set<Person>
 
 final class House {
     
-    let name : String
-    let sigil : Sigil
-    let words : Words
+    let name    : String
+    let sigil   : Sigil
+    let words   : Words
+    let wikiUrl : URL
     private var _members : Members
     
-    init (name: String, sigil: Sigil, words: Words) {
+    init (name: String, sigil: Sigil, words: Words, url: URL) {
         
-        (self.name, self.sigil, self.words) = (name, sigil, words)
+        (self.name, self.sigil, self.words, self.wikiUrl) = (name, sigil, words, url)
         _members = Members()
     }
 }
@@ -50,9 +51,20 @@ extension House {
         guard person.house == self else {
             return
         }
-        //Implementar equatable para poder comparar houses
         
         _members.insert(person)
+    }
+    
+    //Método variadico, puede recibir varios parámetros separados por coma y los transforma en un array de Persons
+    func add(persons: Person...) {
+        for person in persons {
+            add(person: person)
+        }
+    }
+    
+    //Get sorted [Person]
+    func sortedMembers() -> [Person] {
+        return _members.sorted()
     }
 }
 

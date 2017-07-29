@@ -22,11 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.brown
         
         let houses = Repository.local.houses
-        let tabVC = UITabBarController()
+        
+        let housesVC = HousesTableViewController(models: houses).wrappedInNavigationController()
+        window?.rootViewController = housesVC
+        
+        /*let tabVC = UITabBarController()
 
         //Programación funcional, mucho mas corto
         tabVC.viewControllers = houses.map { HouseViewController(model: $0).wrappedInNavigationController()}
-        window?.rootViewController = tabVC
+        window?.rootViewController = tabVC*/
         
         
         //Creamos los navigations controllers también en forma genérica, dependiendo de la cantidad de VC
