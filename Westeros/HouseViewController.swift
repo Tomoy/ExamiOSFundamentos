@@ -31,7 +31,7 @@ class HouseViewController: UIViewController {
         let wikiButton = UIBarButtonItem(title: "Wiki", style: .plain, target: self, action: #selector(displayWiki))
         let personsButton = UIBarButtonItem(title: "Persons", style: .plain, target: self, action: #selector(displayPersons))
         
-        navigationItem.rightBarButtonItems = [wikiButton,personsButton]
+        navigationItem.rightBarButtonItems = [personsButton,wikiButton]
     }
     
     @objc func displayWiki() {

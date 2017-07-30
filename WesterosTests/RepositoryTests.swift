@@ -34,7 +34,7 @@ class RepositoryTests: XCTestCase {
     func testLocalRepositoryHousesCreation() {
         let houses = Repository.local.houses
         XCTAssertNotNil(houses)
-        XCTAssertEqual(houses.count, 2)
+        XCTAssertEqual(houses.count, 3)
     }
     
     func testLocalRepositoryReturnsSortedArrayOfHouses() {
