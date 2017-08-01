@@ -23,43 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let houses = Repository.local.houses
         
-        let housesVC = HousesTableViewController(models: houses).wrappedInNavigationController()
+        //Inicio Tableviewcontroller desde la clase genérica con ayuda del repositorio
+        let dataSource = DataSources.houseDataSource(model: houses)
+        let housesVC = ArrayTableViewController(dataSource: dataSource, delegate: HousesTableViewDelegate(), title: "Westeros Houses", style: .plain).wrappedInNavigationController()
         window?.rootViewController = housesVC
-        
-        /*let tabVC = UITabBarController()
-
-        //Programación funcional, mucho mas corto
-        tabVC.viewControllers = houses.map { HouseViewController(model: $0).wrappedInNavigationController()}
-        window?.rootViewController = tabVC*/
-        
-        
-        //Creamos los navigations controllers también en forma genérica, dependiendo de la cantidad de VC
-        /*var navs = [UINavigationController]()
-        for controller in controllers {
-            navs.append(UINavigationController(rootViewController: controller))
-        }*/
-        
-        //Tabbar con dos navigationcontrollers en ves de UIViewControllers
-        //Directamente uso la extensión para hacerlo mas rápido y reutilizando código para embeber los VC en UINavigationControllers
-        //tabVC.viewControllers = [starkVC.wrappedInNavigationController(), lannisterVC.wrappedInNavigationController()]
-
-        
-        //let starkVC = HouseViewController(model: starkHouse)
-        //let lannisterVC = HouseViewController(model: lannisterHouse)
-        
-        //Creamos el combinador TabBarcontroller
-        //let tabVC = UITabBarController()
-        //tabVC.viewControllers = [starkVC, lannisterVC]
-        //window?.rootViewController = tabVC
-
-
-        //starkNavigationController.pushViewController(starkVC, animated: false)
-        //window?.rootViewController = starkNavigationController
-        
-        
-        //let rootVC:HouseViewController = HouseViewController(model: starkHouse)
-        //window?.rootViewController = rootVC
-        
+                
         return true
     }
 

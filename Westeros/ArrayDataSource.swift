@@ -25,6 +25,12 @@ final class ArrayDataSource<Element> : NSObject, UITableViewDataSource {
         super.init()
     }
     
+    // Función que devuelve el elemento del array según el
+    // indexpath.
+    func element(atIndexPath indexPath: IndexPath)->Element{
+        return _model[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _model.count
     }

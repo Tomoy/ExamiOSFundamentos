@@ -16,8 +16,12 @@
 		DB27FA501F2BB70500F1C8A0 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB27FA4E1F2BB70500F1C8A0 /* WikiViewController.xib */; };
 		DB34E2E51F141292001F0A03 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34E2E31F141292001F0A03 /* HouseViewController.swift */; };
 		DB34E2E61F141292001F0A03 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB34E2E41F141292001F0A03 /* HouseViewController.xib */; };
+		DB4940D71F3101E100870A80 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4940D61F3101E100870A80 /* BaseViewControllerDelegate.swift */; };
 		DB5A4E281F2CE33D00C364AA /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E271F2CE33D00C364AA /* ArrayDataSource.swift */; };
 		DB5A4E2A1F2CE87500C364AA /* ArrayDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E291F2CE87500C364AA /* ArrayDataSourceTest.swift */; };
+		DB5A4E2C1F2DE15A00C364AA /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E2B1F2DE15A00C364AA /* ArrayTableViewController.swift */; };
+		DB5A4E2F1F2DE33900C364AA /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E2E1F2DE33900C364AA /* DataSources.swift */; };
+		DB5A4E311F2DE81700C364AA /* HousesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */; };
 		DB95509B1F0EC4F600B5AC80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */; };
 		DB9550A21F0EC4F600B5AC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */; };
 		DB9550A51F0EC4F600B5AC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A31F0EC4F600B5AC80 /* LaunchScreen.storyboard */; };
@@ -52,8 +56,12 @@
 		DB27FA4E1F2BB70500F1C8A0 /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		DB34E2E31F141292001F0A03 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		DB34E2E41F141292001F0A03 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		DB4940D61F3101E100870A80 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DB5A4E271F2CE33D00C364AA /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		DB5A4E291F2CE87500C364AA /* ArrayDataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceTest.swift; sourceTree = "<group>"; };
+		DB5A4E2B1F2DE15A00C364AA /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
+		DB5A4E2E1F2DE33900C364AA /* DataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
+		DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesTableViewDelegate.swift; sourceTree = "<group>"; };
 		DB9550971F0EC4F600B5AC80 /* Westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,13 +101,25 @@
 		DB34E2E71F14129C001F0A03 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB5A4E2D1F2DE30900C364AA /* Generics */,
 				DB34E2E31F141292001F0A03 /* HouseViewController.swift */,
+				DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */,
 				DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */,
 				DB2201B11F2BE03E0036C54B /* HousesTableViewController.swift */,
 				DB2201B51F2CCFA00036C54B /* PersonsTableViewController.swift */,
-				DB5A4E271F2CE33D00C364AA /* ArrayDataSource.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DB5A4E2D1F2DE30900C364AA /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A4E271F2CE33D00C364AA /* ArrayDataSource.swift */,
+				DB5A4E2B1F2DE15A00C364AA /* ArrayTableViewController.swift */,
+				DB5A4E2E1F2DE33900C364AA /* DataSources.swift */,
+				DB4940D61F3101E100870A80 /* BaseViewControllerDelegate.swift */,
+			);
+			name = Generics;
 			sourceTree = "<group>";
 		};
 		DB95508E1F0EC4F600B5AC80 = {
@@ -297,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5A4E2C1F2DE15A00C364AA /* ArrayTableViewController.swift in Sources */,
 				DB5A4E281F2CE33D00C364AA /* ArrayDataSource.swift in Sources */,
+				DB5A4E311F2DE81700C364AA /* HousesTableViewDelegate.swift in Sources */,
 				DB2201B31F2BE03E0036C54B /* HousesTableViewController.swift in Sources */,
+				DB4940D71F3101E100870A80 /* BaseViewControllerDelegate.swift in Sources */,
 				DB9550C81F0ECDD400B5AC80 /* Person.swift in Sources */,
 				DB9550BD1F0EC53A00B5AC80 /* House.swift in Sources */,
 				DB95509B1F0EC4F600B5AC80 /* AppDelegate.swift in Sources */,
@@ -306,6 +329,7 @@
 				DBDC73EF1F155DE900B2B94D /* UIKitExtensions.swift in Sources */,
 				DBDC73F31F15623B00B2B94D /* Repository.swift in Sources */,
 				DB27FA4F1F2BB70500F1C8A0 /* WikiViewController.swift in Sources */,
+				DB5A4E2F1F2DE33900C364AA /* DataSources.swift in Sources */,
 				DB2201B71F2CCFA00036C54B /* PersonsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
