@@ -21,7 +21,7 @@ class HouseViewController: UIViewController {
     
     init(model: House) {
         self.model = model
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "HouseDetailView", bundle: nil)
         self.title = model.name
         
     }
@@ -43,7 +43,8 @@ class HouseViewController: UIViewController {
     
     @objc func displayPersons() {
         
-        let personsVC = PersonsTableViewController(model: model.sortedMembers())
+        let dataSource = DataSources.personDataSource(model: model.sortedMembers())
+        let personsVC = ArrayTableViewController(dataSource: dataSource, delegate: PersonsTableViewDelegate(), title: "Westeros Houses", style: .plain)
         
         navigationController?.pushViewController(personsVC, animated: true)
     }
