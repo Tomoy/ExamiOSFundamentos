@@ -17,7 +17,10 @@ final class Repository {
 
 protocol SeasonFactory {
     
+    typealias Filter = (Season)->Bool
+    
     var seasons: [Season] {get}
+    func seasons(filteredBy: Filter) -> [Season]
 }
 
 //Cualquier clase que implemente este protcolo (para crear casas), me tiene que devolver una lista de casas,
@@ -35,6 +38,11 @@ protocol HouseFactory {
 //Usamos el protocolo para que cuando queramos cambiarlo a remotefactory, podemos implementar el mismo HouseFactory protocol
 final class LocalFactory : HouseFactory, SeasonFactory {
     
+    func seasons(filteredBy: (Season) -> Bool) -> [Season] {
+        let filtered = Repository.local.seasons.filter(filteredBy)
+        return filtered
+    }
+
     var seasons: [Season] {
         
         get {
@@ -58,7 +66,7 @@ final class LocalFactory : HouseFactory, SeasonFactory {
             let s2ep1 = Episode(title: "The north Remembers", screeningDate: s2ep1Date)
             let s2ep2: Episode = Episode(title: "The night Lands", screeningDate: s2ep2Date)
             
-            let season2 = Season(episodes: [s2ep1, s2ep2], name: "Season 2", releaseDate: s1ep1Date)
+            let season2 = Season(episodes: [s2ep1, s2ep2], name: "Season 2", releaseDate: s2ep1Date)
             s2ep1.season = season2
             s2ep2.season = season2
             
@@ -68,7 +76,7 @@ final class LocalFactory : HouseFactory, SeasonFactory {
             let s3ep1 = Episode(title: "Valar Dohaeris", screeningDate: s3ep1Date)
             let s3ep2: Episode = Episode(title: "Dark Wings, Dark Words", screeningDate: s3ep2Date)
             
-            let season3 = Season(episodes: [s3ep1, s3ep2], name: "Season 3", releaseDate: s1ep1Date)
+            let season3 = Season(episodes: [s3ep1, s3ep2], name: "Season 3", releaseDate: s3ep1Date)
             s3ep1.season = season3
             s3ep2.season = season3
             
@@ -112,7 +120,7 @@ final class LocalFactory : HouseFactory, SeasonFactory {
             s7ep1.season = season7
             s7ep2.season = season7
             
-            return [season1, season2, season3, season4, season5, season6, season7]
+            return [season1, season2, season3, season4, season5, season6, season7].sorted()
         }
     }
     

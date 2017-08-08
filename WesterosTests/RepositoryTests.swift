@@ -55,4 +55,10 @@ class RepositoryTests: XCTestCase {
         let filtered = Repository.local.houses(filteredBy: {$0.count == 1})
         XCTAssertEqual(filtered.count, 1)
     }
+    
+    func testSeasonFiltering() {
+        //Filtro las temporadas que tengan solo 2 capítulos, por ahora todas
+        let filteredSeasons = Repository.local.seasons(filteredBy: {$0.episodes.count == 2})
+        XCTAssertEqual(filteredSeasons.count, 7)
+    }
 }
