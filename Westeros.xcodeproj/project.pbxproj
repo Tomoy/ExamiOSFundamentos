@@ -27,6 +27,8 @@
 		DB5A4E311F2DE81700C364AA /* HousesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */; };
 		DB8745981F3644040000706D /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8745971F3644040000706D /* Season.swift */; };
 		DB87459A1F3644290000706D /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8745991F3644290000706D /* Episode.swift */; };
+		DB87459C1F37858C0000706D /* SeasonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB87459B1F37858C0000706D /* SeasonTests.swift */; };
+		DB87459E1F3785A10000706D /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB87459D1F3785A10000706D /* EpisodeTests.swift */; };
 		DB95509B1F0EC4F600B5AC80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */; };
 		DB9550A21F0EC4F600B5AC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */; };
 		DB9550A51F0EC4F600B5AC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9550A31F0EC4F600B5AC80 /* LaunchScreen.storyboard */; };
@@ -72,6 +74,8 @@
 		DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesTableViewDelegate.swift; sourceTree = "<group>"; };
 		DB8745971F3644040000706D /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		DB8745991F3644290000706D /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		DB87459B1F37858C0000706D /* SeasonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTests.swift; sourceTree = "<group>"; };
+		DB87459D1F3785A10000706D /* EpisodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		DB9550971F0EC4F600B5AC80 /* Westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB95509A1F0EC4F600B5AC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9550A11F0EC4F600B5AC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				DB9550C51F0ECACA00B5AC80 /* PersonTests.swift */,
 				DBDC73F01F1560A500B2B94D /* RepositoryTests.swift */,
 				DB5A4E291F2CE87500C364AA /* ArrayDataSourceTest.swift */,
+				DB87459B1F37858C0000706D /* SeasonTests.swift */,
+				DB87459D1F3785A10000706D /* EpisodeTests.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -358,10 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB87459C1F37858C0000706D /* SeasonTests.swift in Sources */,
 				DB9550BB1F0EC51E00B5AC80 /* HouseTests.swift in Sources */,
 				DB9550C61F0ECACA00B5AC80 /* PersonTests.swift in Sources */,
 				DB5A4E2A1F2CE87500C364AA /* ArrayDataSourceTest.swift in Sources */,
 				DBDC73F11F1560A500B2B94D /* RepositoryTests.swift in Sources */,
+				DB87459E1F3785A10000706D /* EpisodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

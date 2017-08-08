@@ -20,3 +20,49 @@ final class Season {
         self.releaseDate = releaseDate
     }
 }
+
+// Protocolos de Season
+
+extension Season {
+    var proxy : String {
+        return "\(name) \(releaseDate)"
+    }
+    
+    var proxyForComparison : String {
+        
+        get {
+            return name.uppercased()
+        }
+    }
+}
+
+extension Season: Equatable {
+    
+    static func ==(lhs: Season, rhs: Season) -> Bool {
+        return lhs.proxy == rhs.proxy
+    }
+}
+
+extension Season: Hashable {
+    
+    var hashValue: Int {
+        
+        get{
+            return proxy.hashValue
+        }
+    }
+}
+
+extension Season: Comparable {
+    
+    static func <(lhs: Season, rhs: Season) -> Bool {
+        return lhs.proxyForComparison < rhs.proxyForComparison
+    }
+}
+
+extension Season: CustomStringConvertible {
+    
+    var description: String {
+        return "\(name) - \(releaseDate)"
+    }
+}
