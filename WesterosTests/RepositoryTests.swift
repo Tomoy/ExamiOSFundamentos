@@ -57,8 +57,13 @@ class RepositoryTests: XCTestCase {
     }
     
     func testSeasonFiltering() {
-        //Filtro las temporadas que tengan solo 2 capítulos, por ahora todas
-        let filteredSeasons = Repository.local.seasons(filteredBy: {$0.episodes.count == 2})
-        XCTAssertEqual(filteredSeasons.count, 7)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let year2015:Date = formatter.date(from: "2015/01/01")!
+        
+        //Filtro las nuevas temporadas desde el 2015, deberían ser 3 (2015, 2016 y 2017)
+        let filteredSeasons = Repository.local.seasons(filteredBy: {$0.releaseDate.timeIntervalSince1970 > year2015.timeIntervalSince1970})
+        XCTAssertEqual(filteredSeasons.count, 3)
     }
 }
