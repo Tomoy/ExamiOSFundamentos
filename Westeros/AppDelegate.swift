@@ -23,10 +23,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let houses = Repository.local.houses
         
-        //Inicio Tableviewcontroller desde la clase genérica con ayuda del repositorio
-        let dataSource = DataSources.houseDataSource(model: houses)
-        let housesVC = ArrayTableViewController(dataSource: dataSource, delegate: HousesTableViewDelegate(), title: "Westeros Houses", style: .plain).wrappedInNavigationController()
-        window?.rootViewController = housesVC
+        //Inicio Tableviewcontroller para houses desde la clase genérica con ayuda de DataSources
+        let housesDataSource = DataSources.housesDataSource(model: houses)
+        let housesVC = ArrayTableViewController(dataSource: housesDataSource, delegate: HousesTableViewDelegate(), title: "Westeros Houses", style: .plain).wrappedInNavigationController()
+        
+        //Inicio Tableviewcontroller para houses desde la clase genérica con ayuda del repositorio
+        let seasonsDataSource = DataSources.seasonsDataSource(model: Repository.local.seasons)
+        let seasonsVC = ArrayTableViewController(dataSource: seasonsDataSource, delegate: SeasonsTableViewDelegate(), title: "GOT Seasons", style: .plain).wrappedInNavigationController()
+        
+        let tabBarVC = UITabBarController()
+        tabBarVC.viewControllers = [housesVC, seasonsVC]
+
+        let tabBarItems = tabBarVC.tabBar.items! as [UITabBarItem]
+        
+        tabBarItems[0].image = #imageLiteral(resourceName: "housesIcon.png")
+        tabBarItems[0].title = "Houses"
+        tabBarItems[1].image = #imageLiteral(resourceName: "seasonsIcon.png")
+        tabBarItems[1].title = "Seasons"
+
+        
+        window?.rootViewController = tabBarVC
                 
         return true
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1546151F3B7E1200954106 /* SeasonsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */; };
+		DB1546191F3B844F00954106 /* seasonsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB1546181F3B844F00954106 /* seasonsIcon.png */; };
+		DB15461B1F3B85FF00954106 /* housesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB15461A1F3B85FF00954106 /* housesIcon.png */; };
 		DB2201B01F2BDE0A0036C54B /* targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2201AF1F2BDE0A0036C54B /* targaryen.png */; };
 		DB2201B41F2BE03E0036C54B /* HousesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */; };
 		DB2201B81F2CCFA00036C54B /* PersonsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTableViewDelegate.swift; sourceTree = "<group>"; };
+		DB1546181F3B844F00954106 /* seasonsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seasonsIcon.png; sourceTree = "<group>"; };
+		DB15461A1F3B85FF00954106 /* housesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = housesIcon.png; sourceTree = "<group>"; };
 		DB2201AF1F2BDE0A0036C54B /* targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = targaryen.png; sourceTree = "<group>"; };
 		DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HousesTableViewController.xib; sourceTree = "<group>"; };
 		DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonsTableViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */,
 				DB4940D81F310C6B00870A80 /* PersonsTableViewDelegate.swift */,
 				DB4940DC1F31102100870A80 /* PersonDetailViewController.swift */,
+				DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +219,8 @@
 				DB9550BF1F0EC87100B5AC80 /* lannister.jpg */,
 				DB4940E01F3114AB00870A80 /* gotCharacter.jpg */,
 				DB2201AF1F2BDE0A0036C54B /* targaryen.png */,
+				DB15461A1F3B85FF00954106 /* housesIcon.png */,
+				DB1546181F3B844F00954106 /* seasonsIcon.png */,
 				DB9550C01F0EC87100B5AC80 /* stark.png */,
 			);
 			name = Images;
@@ -311,7 +320,9 @@
 			files = (
 				DB9550C11F0EC87100B5AC80 /* lannister.jpg in Resources */,
 				DB9550C21F0EC87100B5AC80 /* stark.png in Resources */,
+				DB15461B1F3B85FF00954106 /* housesIcon.png in Resources */,
 				DB2201B81F2CCFA00036C54B /* PersonsTableViewController.xib in Resources */,
+				DB1546191F3B844F00954106 /* seasonsIcon.png in Resources */,
 				DB34E2E61F141292001F0A03 /* HouseDetailView.xib in Resources */,
 				DB4940DB1F310F3000870A80 /* PersonDetailView.xib in Resources */,
 				DB4940E11F3114AB00870A80 /* gotCharacter.jpg in Resources */,
@@ -340,6 +351,7 @@
 				DB8745981F3644040000706D /* Season.swift in Sources */,
 				DB5A4E2C1F2DE15A00C364AA /* ArrayTableViewController.swift in Sources */,
 				DB5A4E281F2CE33D00C364AA /* ArrayDataSource.swift in Sources */,
+				DB1546151F3B7E1200954106 /* SeasonsTableViewDelegate.swift in Sources */,
 				DB5A4E311F2DE81700C364AA /* HousesTableViewDelegate.swift in Sources */,
 				DB4940D71F3101E100870A80 /* BaseViewControllerDelegate.swift in Sources */,
 				DB9550C81F0ECDD400B5AC80 /* Person.swift in Sources */,
