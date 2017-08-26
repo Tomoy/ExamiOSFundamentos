@@ -12,34 +12,18 @@ import XCTest
 
 class HouseTests: XCTestCase {
     
-    var starkSigil : Sigil!
-    var lannisterSigil : Sigil!
+    var houses: [House] = []
     
     var starkHouse : House!
     var lannisterHouse : House!
     
-    var robb   : Person!
-    var arya   : Person!
-    var tyrion : Person!
-    
     override func setUp() {
         super.setUp()
         
-        //let houses = Repository.local.houses
-        let starkImage = #imageLiteral(resourceName: "stark.png")
-        let starkWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
-        starkSigil = Sigil(description: "Direwolf", image: starkImage)
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming", url: starkWikiURL)
+        houses = Repository.local.houses
         
-        let lannisterImg = #imageLiteral(resourceName: "lannister.jpg")
-        let lannisterWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
-        lannisterSigil = Sigil(description: "Rampant", image: lannisterImg)
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!", url: lannisterWikiURL)
-        
-        robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
-        arya = Person(name: "Arya", house: starkHouse)
-        
-        tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
+        starkHouse = Repository.local.house(named: "Stark")
+        lannisterHouse = Repository.local.house(named: "Lannister")
     }
     
     override func tearDown() {
@@ -49,38 +33,45 @@ class HouseTests: XCTestCase {
     
     func testHouseExistance() {
         
-        XCTAssertNotNil(Repository.local.houses[1])
+        XCTAssertNotNil(houses[1])
     }
     
     func testSigilExistance() {
         
-        XCTAssertNotNil(starkSigil)
-        XCTAssertNotNil(lannisterSigil)
+        for house:House in houses {
+            XCTAssertNotNil(house.sigil)
+        }
     }
     
     func testAddPersons() {
         
-        XCTAssertEqual(starkHouse.count, 0)
-        starkHouse.add(person:robb)
+        let sansa = Person(name: "Sansa", house: starkHouse)
+        let bron = Person(name: "Bron", house: starkHouse)
         
-        XCTAssertEqual(starkHouse.count, 1)
-        starkHouse.add(person:arya)
+        let tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
         
         XCTAssertEqual(starkHouse.count, 2)
+        starkHouse.add(person:sansa)
+        
+        XCTAssertEqual(starkHouse.count, 3)
+        starkHouse.add(person:bron)
+        
+        XCTAssertEqual(starkHouse.count, 4)
         
         //Esto no debería agregarlo, entonces chequeamos que el count siga siendo 2 para saber que no lo agrega
         starkHouse.add(person:tyrion)
-        XCTAssertEqual(starkHouse.count, 2)
+        XCTAssertEqual(starkHouse.count, 4)
         
     }
     
     func testHouseEquality() {
         
         //Identidad
-        XCTAssertEqual(starkHouse, starkHouse)
+        XCTAssertEqual(houses[0], houses[0])
         
         //Igualdad
         let starkWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+        let starkSigil = Sigil(description: "Direwolf", image: #imageLiteral(resourceName: "stark.png"))
         let jinxed = House(name: "Stark", sigil: starkSigil, words: "Winter is coming", url: starkWikiURL)
         XCTAssertEqual(jinxed, starkHouse)
         

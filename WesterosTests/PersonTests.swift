@@ -11,46 +11,15 @@ import XCTest
 
 class PersonTests: XCTestCase {
     
-    var starkImage : UIImage!
-    var lannisterImage : UIImage!
-    
-    var starkSigil : Sigil!
-    var lannisterSigil : Sigil!
-    
-    var starkHouse : House!
-    var lannisterHouse : House!
-    
-    var robb : Person!
-    var arya : Person!
-    var sansa : Person!
-    var ned   : Person!
-
-    
-    var tyrion : Person!
+    var starkHouse:House!
+    var startkMembers:[Person] = []
 
     override func setUp() {
         
         super.setUp()
         
-        starkImage = #imageLiteral(resourceName: "stark.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
-        
-        starkSigil = Sigil(description: "Direwolf", image: starkImage)
-        lannisterSigil = Sigil(description: "Rampant Lion", image: lannisterImage)
-        
-        let starkWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
-        let lannisterWikiURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
-        
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming", url: starkWikiURL)
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!", url: lannisterWikiURL)
-        
-        robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
-        arya = Person(name: "Arya", house: starkHouse)
-        sansa = Person(name: "Sansa", house: starkHouse)
-        ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
-        
-        tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
-        
+        starkHouse = Repository.local.house(named: "Stark")
+        startkMembers = (starkHouse?.sortedMembers())!
     }
     
     override func tearDown() {
@@ -60,26 +29,31 @@ class PersonTests: XCTestCase {
     
     func testCharacterExistance() {
         
-        XCTAssertNotNil(ned)
+        XCTAssertNotNil(startkMembers[0])
     }
     
     func testFullName() {
         
+        let ned = Person(name: "Eddard", alias: "Ned", house: starkHouse!)
+
         XCTAssertEqual(ned.fullName, "Eddard Stark")
     }
     
     func testPersonEquality() {
         
+        let lannisterHouse = Repository.local.house(named: "Lannister")
+        let tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse!)
+
         //Identidad
         XCTAssertEqual(tyrion, tyrion)
         
         //Igualdad
-        let imp = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
+        let imp = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse!)
         
         XCTAssertEqual(imp, tyrion)
         
         //Desigualdad
-        XCTAssertNotEqual(tyrion, arya)
+        XCTAssertNotEqual(tyrion, startkMembers[1])
     }
     
 }

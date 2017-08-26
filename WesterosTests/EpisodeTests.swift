@@ -59,12 +59,12 @@ class EpisodeTests: XCTestCase {
     
     func testEpisodeComparison() {
         
-        //Comparar las casas, tengo que implementar porque las quiero comparar
+        //Comparar los episodios por fecha
         XCTAssertLessThan(episodes[0], episodes[1])
     }
     
     func testEpisodeCustomStringConvertible() {
-        //Testeo que se pueda obtener un string al printear una season
+        //Testeo que se pueda obtener un string al printear un episodio
         XCTAssertNotNil(episodes[0].description)
     }
 }

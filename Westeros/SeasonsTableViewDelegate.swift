@@ -15,9 +15,9 @@ final class SeasonsTableViewDelegate: BaseViewControllerDelegate<Season>, UITabl
         if let season = source?.element(atIndexPath: indexPath),
             let nav = viewController?.navigationController{
             
-            //Inicio Tableviewcontroller para houses desde la clase genérica con ayuda del repositorio
+            //Inicio Tableviewcontroller para episodes desde la clase genérica con ayuda del repositorio
             let seasonDataSource = DataSources.episodesDataSource(model: season.episodes)
-            let episodesVC = ArrayTableViewController(dataSource: seasonDataSource, delegate: nil, title: "\(season.name)", style: .plain)
+            let episodesVC = ArrayTableViewController(dataSource: seasonDataSource, delegate: EpisodesTableViewDelegate(), title: "\(season.name)", style: .plain)
             
             nav.pushViewController(episodesVC, animated: true)
         }

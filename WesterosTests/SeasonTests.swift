@@ -65,7 +65,7 @@ class SeasonTests: XCTestCase {
     
     func testSeasonComparison() {
         
-        //Comparar las casas, tengo que implementar porque las quiero comparar
+        //Comparar las seasons
         XCTAssertLessThan(seasons[2], seasons[4])
     }
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1262411F51DCED00460DAC /* EpisodesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1262401F51DCED00460DAC /* EpisodesTableViewDelegate.swift */; };
+		DB1262441F51DD9A00460DAC /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1262421F51DD9A00460DAC /* EpisodeViewController.swift */; };
+		DB1262451F51DD9A00460DAC /* EpisodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1262431F51DD9A00460DAC /* EpisodeView.xib */; };
 		DB1546151F3B7E1200954106 /* SeasonsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */; };
 		DB1546191F3B844F00954106 /* seasonsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB1546181F3B844F00954106 /* seasonsIcon.png */; };
 		DB15461B1F3B85FF00954106 /* housesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB15461A1F3B85FF00954106 /* housesIcon.png */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1262401F51DCED00460DAC /* EpisodesTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewDelegate.swift; sourceTree = "<group>"; };
+		DB1262421F51DD9A00460DAC /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		DB1262431F51DD9A00460DAC /* EpisodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeView.xib; sourceTree = "<group>"; };
 		DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTableViewDelegate.swift; sourceTree = "<group>"; };
 		DB1546181F3B844F00954106 /* seasonsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seasonsIcon.png; sourceTree = "<group>"; };
 		DB15461A1F3B85FF00954106 /* housesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = housesIcon.png; sourceTree = "<group>"; };
@@ -121,11 +127,13 @@
 			children = (
 				DB5A4E2D1F2DE30900C364AA /* Generics */,
 				DB34E2E31F141292001F0A03 /* HouseViewController.swift */,
+				DB1262421F51DD9A00460DAC /* EpisodeViewController.swift */,
 				DB5A4E301F2DE81700C364AA /* HousesTableViewDelegate.swift */,
 				DB27FA4D1F2BB70500F1C8A0 /* WikiViewController.swift */,
 				DB4940D81F310C6B00870A80 /* PersonsTableViewDelegate.swift */,
 				DB4940DC1F31102100870A80 /* PersonDetailViewController.swift */,
 				DB1546141F3B7E1200954106 /* SeasonsTableViewDelegate.swift */,
+				DB1262401F51DCED00460DAC /* EpisodesTableViewDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				DB34E2E41F141292001F0A03 /* HouseDetailView.xib */,
+				DB1262431F51DD9A00460DAC /* EpisodeView.xib */,
 				DB2201B61F2CCFA00036C54B /* PersonsTableViewController.xib */,
 				DB2201B21F2BE03E0036C54B /* HousesTableViewController.xib */,
 				DB4940DA1F310F3000870A80 /* PersonDetailView.xib */,
@@ -322,6 +331,7 @@
 				DB9550C21F0EC87100B5AC80 /* stark.png in Resources */,
 				DB15461B1F3B85FF00954106 /* housesIcon.png in Resources */,
 				DB2201B81F2CCFA00036C54B /* PersonsTableViewController.xib in Resources */,
+				DB1262451F51DD9A00460DAC /* EpisodeView.xib in Resources */,
 				DB1546191F3B844F00954106 /* seasonsIcon.png in Resources */,
 				DB34E2E61F141292001F0A03 /* HouseDetailView.xib in Resources */,
 				DB4940DB1F310F3000870A80 /* PersonDetailView.xib in Resources */,
@@ -351,7 +361,9 @@
 				DB8745981F3644040000706D /* Season.swift in Sources */,
 				DB5A4E2C1F2DE15A00C364AA /* ArrayTableViewController.swift in Sources */,
 				DB5A4E281F2CE33D00C364AA /* ArrayDataSource.swift in Sources */,
+				DB1262441F51DD9A00460DAC /* EpisodeViewController.swift in Sources */,
 				DB1546151F3B7E1200954106 /* SeasonsTableViewDelegate.swift in Sources */,
+				DB1262411F51DCED00460DAC /* EpisodesTableViewDelegate.swift in Sources */,
 				DB5A4E311F2DE81700C364AA /* HousesTableViewDelegate.swift in Sources */,
 				DB4940D71F3101E100870A80 /* BaseViewControllerDelegate.swift in Sources */,
 				DB9550C81F0ECDD400B5AC80 /* Person.swift in Sources */,
